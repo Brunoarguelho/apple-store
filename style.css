@@ -1,0 +1,235 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+html body{
+    min-height: 100vh;
+    width: 100%;
+    /* background-color: #333; */
+}
+
+header.cabecalho{
+    width: 100%;
+    height: auto;
+    background-color:  #f3f3f3;
+    box-shadow: 0 0 4px #00000012;
+}
+
+nav#menu{
+    list-style: none;
+    color: #505050af;
+    letter-spacing: .2em;
+    font-size: 16px;
+    padding: 15px;
+}
+
+nav#menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+nav#menu li a{
+    text-decoration: none;
+    color: #505050af;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: .3s ease-out;
+    font-weight: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+nav#menu .icon{
+    font-size: 20px;
+    margin-right: 20px;
+    color: black;
+}
+
+.overlay{
+    position: fixed;
+    top: 6%;
+    height: 0;
+    width: 100%;
+    transition: .5s ease;
+    background-color:  #f3f3f3;
+    box-shadow: 0 0 4px #3333336b;
+    opacity: 0; 
+    transition: .5s ease;
+    visibility: hidden;
+}
+
+.cabecalho:hover .overlay{
+    height: 50%;
+    opacity: 1;
+    box-shadow: none;
+    visibility: visible;
+}
+
+.baixo-cima{
+    color: #333;
+    margin: 10% auto 0 auto;
+    font-size: 20px;
+    position: absolute;
+    top: 5%;
+    left: 36%;
+    transform: translate(-30%, -30%);
+    text-align: center;
+    opacity: 1;
+}
+/*--------------------*/
+
+div.segundo-menu{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+div.segundo-menu  .menu2{
+   width: 100%;
+   list-style: none;
+}
+
+div.menu2 img{
+    max-width: 80px;
+    max-height: 80px;
+    display: flex;
+}
+
+.aumento{
+    height: 100px;
+}
+
+.aumento1{
+  margin-top: 20px;
+}
+
+.menu2 ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    margin-top: 25px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.menu2 ul li a{
+    text-decoration: none;
+    color: #505050af;
+    font-weight: bold;
+}
+
+.menu2 ul li a:hover{
+    transition: all ease-in-out 0.2s;
+    color: blue;
+}
+
+.menu2 em{
+  margin-top: 5px;
+  color: rgb(194, 44, 44);
+  font-style: normal;
+  margin-left: -15px;
+}
+/*-----------------------------*/
+section{
+    width: 100%;
+    margin-top: 100px;
+    text-align: center;
+    background-color:  #f3f3f3;
+    position: relative;
+}
+
+section p{
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 18px;
+    padding: 10px;
+}
+
+section .imagem img{
+   width: 100%;
+   height: 600px;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.preco{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+div.preco h1,h2{
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+div.preco h1{
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+    color: rgb(185, 185, 185);
+    text-shadow: 2px 1px 0 #00000065;
+}
+
+div.preco h2{
+    margin-bottom: -30px;
+}
+
+div.preco strong{
+    color: orange;
+    margin-top: -350px;
+}
+
+div.preco div a{
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(60, 60, 186);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 40px;
+}
+
+.ancora{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.ancora .normal{
+    color: rgb(70, 153, 236);
+    background-color: transparent;
+    font-size: 24px;
+    text-align: center;
+}
+
+.ancora .normal:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
