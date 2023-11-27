@@ -12,7 +12,6 @@ html{
 html body{
     min-height: 100vh;
     width: 100%;
-    /* background-color: #333; */
 }
 
 header.cabecalho{
@@ -63,34 +62,78 @@ nav#menu .icon{
     background-color:  #f3f3f3;
     box-shadow: 0 0 4px #3333336b;
     opacity: 0; 
-    transition: .5s ease;
+    transition: .4s ease;
     visibility: hidden;
+    z-index: 999;
 }
 
 .cabecalho:hover .overlay{
-    height: 50%;
+    height: 45vh;
     opacity: 1;
     box-shadow: none;
     visibility: visible;
 }
 
 .baixo-cima{
-    color: #333;
-    margin: 10% auto 0 auto;
-    font-size: 20px;
-    position: absolute;
-    top: 5%;
-    left: 36%;
-    transform: translate(-30%, -30%);
-    text-align: center;
-    opacity: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: -999;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    margin-top: 30px;
 }
+
+.baixo-cima input{
+    border: 1px solid #00000065;
+    outline: none;
+    background: #33333340;
+    text-align: left;
+    padding: 10px 22px;
+    border-radius: 10px; 
+   margin-bottom: 150px;
+}
+
+.baixo-cima p{
+    text-decoration: none;
+    color: #333;
+    padding: 3px 0;
+ }
+
+ .baixo-cima a{
+    text-decoration: none;
+    color: #333;
+ }
+
+ .baixo-cima #icon-overlay{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 57%;
+    left: 16.5%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(5px 5px 10px #00000053);
+ }
+
+ .baixo-cima #icon-pesquisa{
+    font-size: 1.2rem;
+    position: absolute;
+    top: 28.5%;
+    left: 22.5%;
+    color: #505050af;
+ }
+
+.baixo-cima .parte1,.parte2,.parte3,.parte4{
+    font-size: 1.2em;
+}
+
 /*--------------------*/
 
 div.segundo-menu{
     width: 100%;
     height: auto;
     background-color: #fff;
+    margin-top: 10px;
 }
 
 div.segundo-menu  .menu2{
@@ -142,17 +185,17 @@ div.menu2 img{
 /*-----------------------------*/
 section{
     width: 100%;
-    margin-top: 100px;
+    margin-top: 120px;
     text-align: center;
     background-color:  #f3f3f3;
     position: relative;
 }
 
-section p{
+section .parcelas p{
     font-family: 'Times New Roman', Times, serif;
     color: #333;
     font-size: 18px;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 section .imagem img{
@@ -232,4 +275,138 @@ div.preco div a{
     text-decoration: underline;
     font-weight: bold;
 }
+/*--------------*/
 
+main.principal{
+    width: 100%;
+    height: 600px;
+    background: url(imagens/img-principal.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+
+main.conteudo-text{
+   position: absolute;
+}
+
+.conteudo-text h1,p{
+    color: #fff;
+    text-align: center;
+}
+
+.conteudo-text h1{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: -0.8px;
+    font-size: 3em;
+    background-image: linear-gradient(to left, red,orange,blue,green);
+    width: 20%;
+    margin: 3px auto;
+    border-radius: 8px;
+    text-shadow: 2px 2px 0.8px #000;
+}
+
+.conteudo-text p{
+    line-height: 2;
+    font-size: 1.5em;
+}
+
+.conteudo-text a{
+   color: #f3f3f3;
+   text-align: center;
+   text-decoration: none;
+   margin-left: 35px;
+   margin-right: -15px;
+}
+
+.conteudo-text .normal{
+    color: rgb(66, 160, 255);
+    background-color: transparent;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 2px 0.8px #000000c3;
+}
+
+.conteudo-text .compra{
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(60, 60, 186);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 40px;
+}
+/*------------------------*/
+
+article{
+    position: relative;
+    background: url(imagens/img-applewh.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+    margin-top: 1px;
+}
+
+article .conteudo-text2{
+   position: relative;
+}
+
+article .conteudo-text2 h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 3em;
+}
+
+article .conteudo-text2 p{
+    font-size: 2em;
+    font-variant: small-caps;
+    letter-spacing: 1.5px;
+    color: #ff3916;
+    font-family: monospace;
+    line-height: 1.5;
+}
+
+article .conteudo-text2 #branco{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-variant: normal;
+    font-weight: normal;
+    padding-top: 5px;
+    font-size: 1.8em;
+}
+
+.conteudo-text2 .normal{
+    color: rgb(66, 160, 255);
+    background-color: transparent;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: 2px 2px 0.8px #000000c3;
+    margin-right: 28px;
+}
+
+.conteudo-text2 .compra{
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(60, 60, 186);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    margin-top: 15px;
+}
