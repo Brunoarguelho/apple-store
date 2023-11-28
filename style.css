@@ -330,6 +330,7 @@ main.conteudo-text{
     font-size: 24px;
     text-align: center;
     text-shadow: 2px 2px 0.8px #000000c3;
+    text-transform: uppercase;
 }
 
 .conteudo-text .compra{
@@ -388,13 +389,15 @@ article .conteudo-text2 #branco{
     font-size: 1.8em;
 }
 
-.conteudo-text2 .normal{
+.conteudo-text2 a.normal{
     color: rgb(66, 160, 255);
     background-color: transparent;
     font-size: 24px;
+    font-variant: small-caps;
     text-align: center;
     text-shadow: 2px 2px 0.8px #000000c3;
     margin-right: 28px;
+    text-decoration: none;
 }
 
 .conteudo-text2 .compra{
@@ -411,3 +414,12 @@ article .conteudo-text2 #branco{
     margin-top: 15px;
 }
 /*-----------------------------*/
+ div.video{
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+ }
+
+ div.video video{
+    width: 100%;
+ }
