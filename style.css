@@ -5,10 +5,6 @@
     box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 html body{
     min-height: 100vh;
     width: 100%;
@@ -570,6 +566,10 @@ article .conteudo-text2 #branco{
     border-image: url("imagens/borda-banner.jpg") 30 round; 
   }
 
+  div.banner,a{
+    text-decoration: none;
+  }
+
   div.slider {
     width: 3600px;
     height: 400px;
@@ -614,27 +614,154 @@ article .conteudo-text2 #branco{
 
   div.appletv{
     text-align: center;
-    margin-bottom: -60px;
-    margin-top: 30px;
+    margin-bottom: -10px;
+    margin-top: 80px;
     width: 100%;
     height: auto;
   }
 
   div.appletv-text p{
     width: 100%;
-    font-size: 20px;
+    font-size: 24px;
     color: #333;
   }
 
 aside div.linha{
-    margin: 60px auto 0 auto;
+    margin: 40px auto 0 auto;
     width: 60%;
-    border: 1px solid #3333337e;
-    box-shadow: 0 0 10px 2px rgba(66, 161, 255, 0.342);
+    border: 1px solid #33333379;
+    box-shadow: 0 0 10px rgba(66, 161, 255, 0.801);
+}
+
+a.assinar{
+    position: absolute;
+    top: 100%;
+    left: 44%;
+    transform: translate(-50%, -50%);
+    background-color: #0000ffc7;
+    color: white;
+    padding: 6px 21px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    animation: sumir 10s infinite;
+}
+
+@keyframes sumir{
+    0%{
+        transform:  translateY(0);
+        opacity: 0;
+    }
+    50%{
+        transform:  translateY(-40px);
+        opacity: 1;
+    }
+    100%{
+        transform:  translateY(0);
+        opacity: 0;
+    }
 }
 /*------------------------*/
 
 footer{
     width: 100%;
     height: auto;
+    background-color: lavender;
+    margin-top: 30px;
+    padding: 0 2%;
 }
+
+footer .elemento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+}
+
+footer .local{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+    text-align: center;
+    color: #333333a8;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer .sobrenois ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px
+}
+
+footer .sobrenois a{
+    color: #333;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer .redes ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .redes a{
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer .redes .icon-footer{
+    width: 45px;
+    height: 45px;
+    margin-top: -10px;
+}
+
+footer .redes .icon-footer:hover{
+    filter: brightness(90%);
+    transform: scale(1.1);
+}
+
+footer >p{
+    text-align: center;
+    color: #333333a8;
+    width: 60%;
+    margin: 40px auto;
+    font-size: 20px;
+}
+
+footer >p a{
+    color: #333333a8;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer >p a:hover{
+    color: #333;
+}
+
+footer .linha{
+    border: 1px solid #33333337;
+    box-shadow: 0 0 5px #00000026;
+    width: 30%;
+    margin: 0 auto 20px auto;
+}
+footer .copy{
+    font-size: 24px;
+    margin-bottom: -30px;
+    background-color: #333333;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+    line-height: 1.4;
+    border-radius: 3px;
+}
+
+/*---------------media screen--------------*/
