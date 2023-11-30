@@ -1,3 +1,4 @@
+@charset "UTF-8";
 
 *{
     margin: 0;
@@ -8,6 +9,59 @@
 html body{
     min-height: 100vh;
     width: 100%;
+    background-color: white;
+}
+
+div.preload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+div.img-preload{
+    position: absolute;
+    top: 50%;
+    left: 47%;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    animation: transicao 3s linear infinite;
+    display: flex;
+    flex-direction: column;
+}
+
+div.img-preload .icon-pre{
+    font-size: 10em;
+    filter: drop-shadow(5px 5px 10px #3232323c);
+}
+
+div.img-preload span{
+    font-size: 5em;
+    margin-top: -30px;
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes transicao{
+    0% {
+       transform: translate(-50%,-50%) scale(0.5);
+    }
+    50% {
+       transform: translate(-50%,-50%) scale(1);
+    }
+    100% {
+       transform: translate(-50%,-50%) scale(0.5);
+    }
+}
+
+@keyframes rotate{
+    from {
+        transform:rotateY(0deg)
+        
+    }
+    to {
+        transform:rotateY(360deg)
+    }
 }
 
 header.cabecalho{
@@ -87,7 +141,7 @@ nav#menu .icon{
     text-align: left;
     padding: 10px 22px;
     border-radius: 10px; 
-   margin-bottom: 150px;
+    margin-bottom: 150px;
 }
 
 .baixo-cima p{
@@ -765,3 +819,178 @@ footer .copy{
 }
 
 /*---------------media screen--------------*/
+
+@media screen and (max-width: 1183px) {
+    .baixo-cima #icon-overlay{
+        left: 17.2%;
+    }
+
+    .baixo-cima #icon-pesquisa{
+        left: 24.5%;
+    }
+
+    article{
+        background-position: 100% 1%;
+    }
+    
+    div.banner{
+        width: 1080px;
+    }
+
+    div.appletv{
+        font-size: 1em;
+        margin-bottom: -50px;
+        margin-top: 5px;
+    }
+
+    footer{
+        padding: 0;
+    }
+
+    footer .elemento{
+        padding: 20px;
+    }
+
+    footer .local{
+        gap: 9px;
+        font-size: 18px;
+    }
+
+    footer .sobrenois ul{
+        font-size: 18px;
+        gap: 15px;
+    }
+
+    footer .redes ul{
+        gap: 15px; 
+    }
+
+    footer .redes .icon-footer{
+        width: 38px;
+        height: 38px;
+        margin-top: -5px;
+    }
+
+    footer >p{
+        width: 70%;
+    }
+
+    footer .copy{
+        width: 95%;
+        line-height: 1.9;
+        margin-bottom: 10px;
+        padding: 5px 0;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+    nav#menu{
+        font-size: small;
+    }
+
+    nav#menu li a{
+       padding: 0 5px;
+    }
+
+    .cabecalho:hover .overlay{
+        height: 45vh; 
+    }
+
+    .baixo-cima{
+        font-size: 15px;
+    }
+
+    .baixo-cima input{
+        padding: 8px 22px;
+    }
+
+    .baixo-cima #icon-pesquisa{
+        top: 27%;
+        left: 26%; 
+    }
+
+    .baixo-cima #icon-overlay{
+        top: 54%;
+        left: 18%;
+    }
+
+    div.menu2 img{
+        max-width: 60px;
+        max-height: 60px;
+    }
+
+    .conteudo-text h1{
+        font-size: 2.5em;
+    }
+
+    .conteudo-text p{
+        margin-top: 30px;
+    }
+
+    .conteudo-text a{
+        margin-top: 100px;
+    }
+
+    article{
+        background-position: top;
+    }
+
+    article .conteudo-text2 p{
+        font-size: 1.5em;
+    }
+
+    .text-macbook{
+        width: 30%;
+    }
+
+    .text-macbook h2{
+        font-size: 1.5em;
+    }
+
+    .text-imac{
+        width: 30%;
+    }
+
+    .text-imac h2{
+        font-size: 1.5em;
+    }
+
+    div.banner{
+        width: 950px;
+        height: 550px;
+    }
+
+    div.slider img{
+        width: 950px;
+        height: 550px;
+    }
+
+    div.appletv{
+        margin-top: 50px;
+        margin-bottom: -5px;
+    }
+
+    div.appletv-text p{
+        font-size: 22px;
+    }
+
+    footer .local{
+        font-size: small;
+        gap: 5px;
+    }
+
+    footer .sobrenois ul{
+        gap: 10px;
+        font-size: small;
+    }
+
+    footer .redes .icon-footer{
+        width: 32px;
+        height: 32px;
+    }
+
+    footer .copy{
+        font-size: 18px;
+    }
+}
